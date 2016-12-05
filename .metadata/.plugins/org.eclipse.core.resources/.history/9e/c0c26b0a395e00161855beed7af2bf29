@@ -1,0 +1,36 @@
+import java.applet.Applet;
+import java.awt.*;
+import java.applet.*;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+
+public class Shield extends Applet
+{
+	public void paint(Graphics g)
+	{
+		ashield(g);
+		setSize(500,500);
+		
+	}
+	public void ashield(Graphics g)
+	{
+		//outer ring
+		g.setColor(new Color(200,0,0));
+		g.fillOval(0,0,500,500);
+		//outer white ring
+		g.setColor(Color.WHITE);
+		g.fillOval(50, 50, 400, 400);
+		//innner red
+		g.setColor(new Color(200,0,0));
+		g.fillOval(100,100,300,300);
+		//blue ring
+		g.setColor(new Color(0,0,200));
+		g.fillOval(0,0,500,500);
+		
+		
+	}
+	
+	
+	
+	
+}

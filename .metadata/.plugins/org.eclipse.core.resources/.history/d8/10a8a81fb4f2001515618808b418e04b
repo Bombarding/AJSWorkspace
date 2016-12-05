@@ -1,0 +1,61 @@
+import java.awt.*;
+import java.applet.*;
+
+public class Robot extends Applet 
+{
+
+	// Specify variables that will be needed everywhere, anytime here
+	// The font variable
+	Font bigFont;
+	
+	// The colors you will use
+	Color redColor;
+	//Color weirdColor;
+	Color bgColor;
+	
+	
+	public void init()  
+	{
+		
+		
+		// lesser known colors can be made with R(ed)G(reen)B(lue).
+		//weirdColor = new Color(60,60,122);
+		
+		bgColor = Color.white;
+		
+		// this will set the backgroundcolor of the applet
+		setBackground(bgColor);
+		
+	}
+	
+	public void stop()
+	{
+	}
+
+	// now lets draw things on screen
+	public void paint(Graphics g) 
+	{
+		// tell g to use your font
+		//g.setFont(bigFont);
+		//g.drawString("Shapes and Colors",80,20);
+		setSize (1280, 720);
+		// Now we tell g to change the color
+		g.setColor(redColor);
+		
+		// This will draw a rectangle (xco,yco,xwidth,height);
+		g.fillRect(500,500,50,100);
+		
+		// This will fill a rectangle
+		g.fillRect(550,400,50,100);
+		
+		
+	
+	}
+	class CvRobotArm extends Canvas
+	{
+		int centerX, centerY, n, k;
+	    float p0, q0;
+		
+	}
+	
+}

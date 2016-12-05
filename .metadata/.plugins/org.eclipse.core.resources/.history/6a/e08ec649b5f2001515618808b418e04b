@@ -1,0 +1,38 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.geom.AffineTransform;
+import java.awt.geom.Path2D;
+import java.awt.geom.PathIterator;
+
+public class Robot extends Frame
+{
+	public static void main(String [] args)
+	{
+		new Robot();
+	}
+	Robot()
+	{
+		super("Robot");
+		addWindowListener(new WindowAdapter() 
+		{
+            public void windowClosing(WindowEvent e)
+            {System.exit(0);
+            }
+         });
+		setSize(800, 600);
+        add("Center", new CvRobot());
+        show();
+	}
+}
+class CvRobot extends Canvas
+{
+	public void paint(Graphics g)
+	{
+		Graphics2D g2d = (Graphics2D)g;
+		int [] basex = {0, 0, 150, 150};
+        int [] basey = {0, 200, 200, 0};
+        Polygon base = new Polygon(basex, basey, 4);
+        Path2D basep2d = new Path2D.Double(base);
+	}
+	
+}
